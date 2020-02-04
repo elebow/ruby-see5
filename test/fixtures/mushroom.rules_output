@@ -1,0 +1,125 @@
+
+C5.0 [Release 2.07 GPL Edition]  	Sun Feb  2 20:25:58 2020
+-------------------------------
+
+    Options:
+	Application `mushroom'
+	Rule-based classifiers
+
+Read 8124 cases (22 attributes) from mushroom.data
+
+Rules:
+
+Rule 1: (1296, lift 1.9)
+	odor = n
+	spore-print-color = k
+	->  class e  [0.999]
+
+Rule 2: (1344, lift 1.9)
+	odor = n
+	spore-print-color = n
+	->  class e  [0.999]
+
+Rule 3: (1104, lift 1.9)
+	bruises? = f
+	odor = n
+	gill-spacing = w
+	veil-color = w
+	->  class e  [0.999]
+
+Rule 4: (400, lift 1.9)
+	odor = a
+	->  class e  [0.998]
+
+Rule 5: (400, lift 1.9)
+	odor = l
+	->  class e  [0.998]
+
+Rule 6: (528, lift 1.9)
+	odor = n
+	gill-size = b
+	spore-print-color = w
+	->  class e  [0.998]
+
+Rule 7: (48, lift 1.9)
+	spore-print-color = b
+	->  class e  [0.980]
+
+Rule 8: (48, lift 1.9)
+	odor = n
+	spore-print-color = h
+	->  class e  [0.980]
+
+Rule 9: (48, lift 1.9)
+	spore-print-color = o
+	->  class e  [0.980]
+
+Rule 10: (48, lift 1.9)
+	spore-print-color = y
+	->  class e  [0.980]
+
+Rule 11: (2160, lift 2.1)
+	odor = f
+	->  class p  [1.000]
+
+Rule 12: (1760, lift 2.1)
+	gill-spacing = c
+	gill-size = n
+	spore-print-color = w
+	->  class p  [0.999]
+
+Rule 13: (256, lift 2.1)
+	odor = p
+	->  class p  [0.996]
+
+Rule 14: (192, lift 2.1)
+	odor = c
+	->  class p  [0.995]
+
+Rule 15: (72, lift 2.0)
+	spore-print-color = r
+	->  class p  [0.986]
+
+Rule 16: (36, lift 2.0)
+	odor = m
+	->  class p  [0.974]
+
+Rule 17: (8, lift 1.9)
+	veil-color = y
+	->  class p  [0.900]
+
+Rule 18: (8, lift 1.9)
+	bruises? = t
+	odor = n
+	gill-size = n
+	->  class p  [0.900]
+
+Default class: e
+
+
+Evaluation on training data (8124 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	    18    0( 0.0%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	  4208          (a): class e
+	        3916    (b): class p
+
+
+	Attribute usage:
+
+	     83%  odor
+	     64%  spore-print-color
+	     35%  gill-spacing
+	     28%  gill-size
+	     14%  bruises?
+	     14%  veil-color
+
+
+Time: 0.0 secs
