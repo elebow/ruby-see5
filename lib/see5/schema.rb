@@ -22,5 +22,25 @@ module See5
           "#{attr}: #{vals.join(',')}"
         end.join("\n")
     end
+
+    # Infers a schema from a dataset
+    def self.from_dataset(data, class_attribute: nil)
+      classes = data.map { |record| record[class_attribute.to_sym] }.uniq
+
+      attributes = {}
+      data.each do |record|
+        record.each do |key, value|
+          if !attributes.include?(key)
+            attributes[key] = [value]
+          elsif !attributes[key].include?(value)
+            attributes[key].append(value)
+          end
+        end
+      end
+
+      new(classes: classes,
+          attributes: attributes,
+          class_attribute: class_attribute)
+    end
   end
 end

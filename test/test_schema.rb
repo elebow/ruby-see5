@@ -53,4 +53,24 @@ class TestSchema < Minitest::Test
       schema.names_file_contents
     )
   end
+
+  def test_from_dataset
+    schema = See5::Schema.from_dataset(
+      [
+        { "a-nature": true, "b-nature": :high, "breed": "a" },
+        { "a-nature": true, "b-nature": :medium, "breed": "a" },
+        { "a-nature": false, "b-nature": :high, "breed": "b" },
+        { "a-nature": true, "b-nature": :low, "breed": "c" }
+      ],
+      class_attribute: "breed"
+    )
+
+    assert_equal(
+      "breed\n" \
+        "a-nature: true,false\n" \
+        "b-nature: high,medium,low\n" \
+        "breed: a,b,c",
+      schema.names_file_contents
+    )
+  end
 end
