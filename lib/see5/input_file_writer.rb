@@ -41,7 +41,12 @@ module See5
 
     def row(record)
       @schema.attributes.map do |attr, _vals|
-        record.send(attr)
+        if record.is_a?(Hash)
+          record[attr]
+        else
+          # assume some kind of OpenStruct- or ActiveRecord-like object
+          record.send(attr)
+        end
       end.join(",")
     end
 
