@@ -20,6 +20,9 @@ module See5
     def write_files
       write_names_file
       write_data_file
+
+      names_io.close
+      data_io.close
     end
 
     def write_names_file
