@@ -2,7 +2,7 @@
 
 require "see5/input_file_writer"
 require "see5/model"
-require "see5/rules_file_parser"
+require "see5/rules_output_parser"
 require "see5/schema"
 require "see5/version"
 
@@ -13,7 +13,7 @@ module See5
 
     run_see5
 
-    output = See5::RulesFileParser.parse_file("/tmp/ruby-see5.rules_output")
+    output = See5::RulesOutputParser.parse_file("/tmp/ruby-see5.rules_output")
 
     See5::Model.new(**output)
   end

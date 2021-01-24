@@ -6,7 +6,7 @@ module See5
   # Read See5 rules output and return an array of hashes representing the rules
   # Note that this is the output normally sent to stdout, NOT the .rules file!
   # The .rules file lacks some important information like confidence.
-  class RulesFileParser
+  class RulesOutputParser
     def self.parse_file(fname)
       new(fname).model
     end

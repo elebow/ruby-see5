@@ -2,9 +2,9 @@
 
 require_relative "test_helper"
 
-class TestRulesFileParser < Minitest::Test
+class TestRulesOutputParser < Minitest::Test
   def setup
-    @model = See5::RulesFileParser
+    @model = See5::RulesOutputParser
              .new("test/fixtures/mushroom.rules_output")
              .model
   end
