@@ -44,7 +44,7 @@ module See5
         if record.is_a?(Hash)
           record[attr]
         else
-          # assume some kind of OpenStruct- or ActiveRecord-like object
+          # assume some kind of OpenStruct- or ActiveModel-like object
           record.send(attr)
         end
       end.join(",")
