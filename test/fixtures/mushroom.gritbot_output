@@ -1,0 +1,58 @@
+
+GritBot [Release 2.02]  	Tue Sep 22 19:09:46 2015
+----------------------
+
+    Options:
+	Application `hypothyroid'
+
+Read 2772 cases (24 attributes) from hypothyroid.data
+Read 1000 cases from hypothyroid.test
+
+    while checking age:
+	excluding 1 missing value
+
+    while checking sex:
+	excluding 150 missing values
+
+    while checking TSH:
+	excluding 369 missing values
+	excluding high tail (236 cases above 9.4)
+
+    while checking T3:
+	excluding 769 missing values
+
+    while checking TT4:
+	excluding 231 missing values
+
+    while checking T4U:
+	excluding 387 missing values
+
+    while checking FTI:
+	excluding 389 missing values
+	excluding low tail (49 cases below 36)
+
+5 possible anomalies identified
+
+data case 1365: (label 861)  [0.002]
+	age = 455  (3771 cases, mean 52, 99.97% <= 94)
+
+test case 373: (label 769)  [0.006]
+	T3 = 7.6  (602 cases, mean 2.08, 99.8% <= 4)
+	    TT4 > 83 and <= 155 [120]
+	    T4U > 0.99 and <= 1.12 [1.04]
+
+data case 2215: (label 2676)  [0.008]
+	TSH = 8.5  (35 cases, mean 1.061, 34 <= 2.9)
+	    FTI > 120.75 and <= 121.8 [121]
+	    diagnosis in {secondary, negative} [negative]
+
+data case 2224: (label 1562)  [0.014]
+	age = 75  (53 cases, mean 32, 51 <= 42)
+	    pregnant = t
+
+data case 1610: (label 3023)  [0.016]
+	age = 73  (53 cases, mean 32, 51 <= 42)
+	    pregnant = t
+
+
+Time: 0.4 secs
