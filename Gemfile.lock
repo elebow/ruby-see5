@@ -1,12 +1,12 @@
 PATH
   remote: .
   specs:
-    see5 (0.1.0)
+    see5 (0.2.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    minitest (5.14.1)
+    minitest (5.14.4)
     rake (13.0.1)
 
 PLATFORMS
