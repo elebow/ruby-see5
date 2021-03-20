@@ -28,7 +28,9 @@ gem install see5
 
 `c5.0` must be available in the system path.
 
-Input data must be an Enumerable of Hashes, OpenStructs, or ActiveModel-like objects—anything that responds to `#[]` or `#send(:attr_name)` for each attribute name. The objects must respond to `#each` for automatic schema construction; otherwise, you will have to specify the schema.
+Input data must be an Enumerable of Hashes, OpenStructs, or ActiveModel-like objects—anything that responds to `#[]` or `#send(:attr_name)` for each attribute name.
+
+The objects must respond to `#each` for automatic schema construction; otherwise, you will have to specify the schema.
 
 ```ruby
 data = [
@@ -76,9 +78,11 @@ Load a classifier from a JSON string.
 classifier = See5::Model.from_json(json_string)
 ```
 
-### Anomaly detection
+### Anomaly detection with GritBot
 
 Anomaly detection uses the same input format as training a model. Call `See5.audit` to detect anomalies in the set.
+
+`gritbot` must be available in the system path.
 
 ```ruby
 anomalies = See5.audit(data, class_attribute: :a)
