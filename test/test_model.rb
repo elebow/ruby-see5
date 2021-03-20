@@ -30,4 +30,16 @@ class TestModel < Minitest::Test
   end
 
   # TODO: test_match_multiple_rules
+
+  def test_to_json
+    assert_equal(
+      "{\"default_classification\":\"c\",\"rules\":[{\"rule_info\":{},\"conditions\":{\"a-nature\":true,\"b-nature\":false},\"classification\":\"a\",\"confidence\":null},{\"rule_info\":{},\"conditions\":{\"a-nature\":false,\"b-nature\":true},\"classification\":\"b\",\"confidence\":null}]}",
+      @model.to_json)
+  end
+
+  def test_from_json
+    new_model = See5::Model.from_json("{\"default_classification\":\"c\",\"rules\":[{\"rule_info\":{},\"conditions\":{\"a-nature\":true,\"b-nature\":false},\"classification\":\"a\",\"confidence\":null},{\"rule_info\":{},\"conditions\":{\"a-nature\":false,\"b-nature\":true},\"classification\":\"b\",\"confidence\":null}]}")
+
+    assert_equal(@model.to_h, new_model.to_h)
+  end
 end
