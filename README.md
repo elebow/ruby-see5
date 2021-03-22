@@ -1,4 +1,4 @@
-# Ruby::See5
+# See5
 
 A Ruby frontend for the See5/C5.0 family of classifiers and modellers. Builds models from Ruby objects.
 
