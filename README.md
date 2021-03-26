@@ -22,11 +22,13 @@ Or install it yourself as:
 gem install see5
 ```
 
+You may also wish to install the gem `see5-installer` to provide the required executables: <https://github.com/elebow/ruby-see5-installer>.
+
 ## Usage
 
 ### Training a classifier
 
-`c5.0` must be available in the system path.
+The gem `see5-installer` must be installed, or `c5.0` must be available in the system path.
 
 Input data must be an Enumerable of Hashes, OpenStructs, or ActiveModel-like objects—anything that responds to `#[]` or `#send(:attr_name)` for each attribute name.
 
@@ -82,7 +84,7 @@ classifier = See5::Model.from_json(json_string)
 
 Anomaly detection uses the same input format as training a model. Call `See5.audit` to detect anomalies in the set.
 
-`gritbot` must be available in the system path.
+The gem `see5-installer` must be installed, or `gritbot` must be available in the system path.
 
 ```ruby
 anomalies = See5.audit(data, class_attribute: :a)
