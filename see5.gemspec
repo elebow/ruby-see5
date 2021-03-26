@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "A Ruby frontend for the See5/C5.0 family of classifiers and modellers."
   #spec.description   = "TODO: Write a longer description or delete this line."
   spec.homepage      = "https://github.com/elebow/ruby-see5"
+  spec.license       = "MIT"
 
   if spec.respond_to?(:metadata)
     spec.metadata["homepage_uri"] = spec.homepage
